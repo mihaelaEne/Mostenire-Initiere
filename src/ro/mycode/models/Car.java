@@ -1,4 +1,4 @@
-package ro.mycode;
+package ro.mycode.models;
 
 public class Car extends Vehicle {
     private String model;

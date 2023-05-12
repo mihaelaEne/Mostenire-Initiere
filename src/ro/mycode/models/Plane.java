@@ -1,4 +1,4 @@
-package ro.mycode;
+package ro.mycode.models;
 
 public class Plane extends Vehicle{
     private String aeroportHome;
