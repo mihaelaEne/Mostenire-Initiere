@@ -19,7 +19,7 @@ public class Barca extends Vehicle{
     }
 
 public Barca(int  nrKg, String nume, String port){
-    super("test",1,1993);
+    super("testBarca",1,1993,"test");
     System.out.println("Eu sunt constructorul din Barca cu 3 param (toti parametrii)");
     this.nrKg=nrKg;
     this.nume=nume;
@@ -27,7 +27,7 @@ public Barca(int  nrKg, String nume, String port){
 }
 
     public Barca(String producer, int id, int year, int nrKg, String nume, String port) {
-        super(producer, id, year);
+        super(producer, id, year,"barca");
         System.out.println("Eu sunt constructorul din Barca cu toti param, si din veh");
 
         this.nrKg = nrKg;
