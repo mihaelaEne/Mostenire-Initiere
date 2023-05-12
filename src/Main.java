@@ -1,5 +1,4 @@
-import ro.mycode.Car;
-import ro.mycode.Vehicle;
+import ro.mycode.models.Car;
 
 public class Main {
     public static void main(String[] args) {

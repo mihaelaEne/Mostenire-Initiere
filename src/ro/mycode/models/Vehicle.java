@@ -1,4 +1,4 @@
-package ro.mycode;
+package ro.mycode.models;
 
 public class Vehicle {
     private String producer="";

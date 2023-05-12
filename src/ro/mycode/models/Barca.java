@@ -1,4 +1,4 @@
-package ro.mycode;
+package ro.mycode.models;
 
 public class Barca extends Vehicle{
     private int nrKg;
@@ -28,7 +28,7 @@ public Barca(int  nrKg, String nume, String port){
 
     public Barca(String producer, int id, int year, int nrKg, String nume, String port) {
         super(producer, id, year);
-        System.out.println("Eu sunt constructorul din Barca cu  (toti parametrii)");
+        System.out.println("Eu sunt constructorul din Barca cu toti param, si din veh");
 
         this.nrKg = nrKg;
         this.nume = nume;
