@@ -7,7 +7,7 @@ public class Plane extends Vehicle{
 
 
     public Plane(String aeroportHome, int nrLocuri, String companie){
-        super("testProducatorPlane", 2,2020);
+        super("testProducatorPlane", 2,2020,"test");
         System.out.println("Eu sunt const din Plane cu 3 param ");
         this.aeroportHome=aeroportHome;
         this.nrLocuri=nrLocuri;
@@ -16,7 +16,7 @@ public class Plane extends Vehicle{
     }
 
     public Plane(String producer, int id, int year,String aeroportHome, int nrLocuri, String companie ){
-        super(producer, id, year);
+        super(producer, id, year,"palne");
         System.out.println("Eu sunt constructorul din Plane cu  (toti param)+ mostenire");
         this.aeroportHome=aeroportHome;
         this.nrLocuri=nrLocuri;

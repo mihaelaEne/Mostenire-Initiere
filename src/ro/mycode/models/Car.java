@@ -7,7 +7,7 @@ public class Car extends Vehicle {
 
     public Car(String model, String culoare, int nrUsi){
 
-        super("test",1,1993);
+        super("testCar",1,1993,"test");
         System.out.println("Eu sunt constructorul din Car cu 3 param (toti parametrii)");
         this.model=model;
         this.culoare=culoare;
@@ -15,7 +15,7 @@ public class Car extends Vehicle {
     }
 
     public Car(String producer, int id, int year, String model, String culoare, int nrUsi) {
-        super(producer, id, year);
+        super(producer, id, year,"car");
         System.out.println("Eu sunt constructorul din Car cu  (toti parametrii)");
         this.model = model;
         this.culoare = culoare;

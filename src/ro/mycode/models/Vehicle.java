@@ -5,15 +5,18 @@ public class Vehicle {
     private int id=0;
     private int year=0;
 
+    private String type;
+
 
     public Vehicle(){
         System.out.println("eu sunt constructorul fara parametrii");
     }
-    public Vehicle(String producer, int id, int year) {
+    public Vehicle(String producer, int id, int year,String type) {
         System.out.println("eu sunt constructorul cu 3 parametrii(toti param) din vehicul");
         this.producer = producer;
         this.id = id;
         this.year = year;
+        this.type=type;
     }
 
     public Vehicle(String producer,int id){
