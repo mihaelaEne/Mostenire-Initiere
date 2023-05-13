@@ -1,0 +1,9 @@
+Car,Ford,1,2021,Fiesta,albastru,4
+Car,Honda,2,2020,Civic,alb,4
+Car,Dacia,3,2022,Logan,negru,4
+Plane,planeProducer1,1,2022,OTP,200,Tarom
+Plane,planeProducer2,2,2015,CLJ,600,Wizz
+Plane,planeProducer3,3,2010,SBZ,100,Tarom
+Barca,barcaProducer1,1,2023,5000,NumeBarca1,NumePort1
+Barca,barcaProducer2,2,2009,100,numeBarca2,numePort2
+Barca, barcaProducer3,3,2010,20,numeBarca3,numePort3

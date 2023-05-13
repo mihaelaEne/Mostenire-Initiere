@@ -7,8 +7,8 @@ public class Plane extends Vehicle{
 
 
     public Plane(String aeroportHome, int nrLocuri, String companie){
-        super("testProducatorPlane", 2,2020,"test");
-        System.out.println("Eu sunt const din Plane cu 3 param ");
+        super("PlaneManual", 2,2020,"type3");
+      //  System.out.println("Eu sunt const din Plane cu 3 param ");
         this.aeroportHome=aeroportHome;
         this.nrLocuri=nrLocuri;
         this.companie=companie;
@@ -17,7 +17,7 @@ public class Plane extends Vehicle{
 
     public Plane(String producer, int id, int year,String aeroportHome, int nrLocuri, String companie ){
         super(producer, id, year,"palne");
-        System.out.println("Eu sunt constructorul din Plane cu  (toti param)+ mostenire");
+       // System.out.println("Eu sunt constructorul din Plane cu  (toti param)+ mostenire");
         this.aeroportHome=aeroportHome;
         this.nrLocuri=nrLocuri;
         this.companie=companie;
@@ -37,16 +37,13 @@ public class Plane extends Vehicle{
         this.companie=companie;
     }
 
-    public String descriereAvion(){
-        String text="";
-        text+="Eu sunt un avion cu urmatoarele propr: "+"\n";
-        text += "producer: " + super.getProducer() + "\n";
-        text += "id: " + super.getId() + "\n";
-        text += "year: " + super.getYear() + "\n";
-        text+= "aeroportul Home"+this.aeroportHome+"\n";
-        text+="nr Locuri "+this.nrLocuri;
-        text+="companie: "+this.companie;
-        return text;
+
+    public Plane(String prop){
+        super(prop);
+        String [] split=prop.split(",");
+        this.aeroportHome=split[4];
+        this.nrLocuri=Integer.parseInt(split[5]);
+        this.companie=split[6];
     }
 
 
@@ -72,5 +69,16 @@ public class Plane extends Vehicle{
 
     public void setCompanie(String companie) {
         this.companie = companie;
+    }
+    public String descriereAvion(){
+        String text="";
+        text+="Eu sunt un avion cu urmatoarele propr: "+"\n";
+        text += "producer: " + super.getProducer() + "\n";
+        text += "id: " + super.getId() + "\n";
+        text += "year: " + super.getYear() + "\n";
+        text+= "aeroportul Home"+this.aeroportHome+"\n";
+        text+="nr Locuri "+this.nrLocuri;
+        text+="companie: "+this.companie;
+        return text;
     }
 }
