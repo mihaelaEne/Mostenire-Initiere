@@ -7,8 +7,8 @@ public class Car extends Vehicle {
 
     public Car(String model, String culoare, int nrUsi){
 
-        super("testCar",1,1993,"test");
-        System.out.println("Eu sunt constructorul din Car cu 3 param (toti parametrii)");
+        super("CarManual",1,1993,"type2");
+       // System.out.println("Eu sunt constructorul din Car cu 3 param (toti parametrii)");
         this.model=model;
         this.culoare=culoare;
         this.nrUsi=nrUsi;
@@ -16,7 +16,7 @@ public class Car extends Vehicle {
 
     public Car(String producer, int id, int year, String model, String culoare, int nrUsi) {
         super(producer, id, year,"car");
-        System.out.println("Eu sunt constructorul din Car cu  (toti parametrii)");
+       // System.out.println("Eu sunt constructorul din Car cu  (toti parametrii)");
         this.model = model;
         this.culoare = culoare;
         this.nrUsi = nrUsi;
@@ -36,19 +36,15 @@ public class Car extends Vehicle {
         this.nrUsi = nrUsi;
     }
 
-    public String descriereCar() {
-
-        String text = "Eu sunt car cu prorietatile:";
-
-        text += "producer: " + super.getProducer() + "\n";
-        text += "id: " + super.getId() + "\n";
-        text += "year: " + super.getYear() + "\n";
-        text += " model: " + this.model;
-        text += " culoare: " + this.culoare;
-        text += "nr Usi: " + this.nrUsi;
-
-        return text;
+    public Car(String prop){
+        super(prop);
+        String [] split=prop.split(",");
+        this.model=split[4];
+        this.culoare=split[5];
+        this.nrUsi=Integer.parseInt(split[6]);
     }
+
+
 
     public String getModel() {
         return model;
@@ -72,5 +68,18 @@ public class Car extends Vehicle {
 
     public void setNrUsi(int nrUsi) {
         this.nrUsi = nrUsi;
+    }
+    public String descriereCar() {
+
+        String text = "Eu sunt car cu prorietatile:"+"\n";
+
+        text += "producer: " + super.getProducer() + "\n";
+        text += "id: " + super.getId() + "\n";
+        text += "year: " + super.getYear() + "\n";
+        text += "model: " + this.model+ "\n";
+        text += "culoare: " + this.culoare+ "\n";
+        text += "nr Usi: " + this.nrUsi;
+
+        return text;
     }
 }
