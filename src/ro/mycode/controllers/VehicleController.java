@@ -6,6 +6,8 @@ import ro.mycode.models.Plane;
 import ro.mycode.models.Vehicle;
 
 import java.io.File;
+import java.io.FileWriter;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -13,6 +15,7 @@ public class VehicleController {
 
 
     private ArrayList<Vehicle> vehicles;
+    private ArrayList<Barca> barci;
 
     public VehicleController(ArrayList<Vehicle> vehicles) {
         this.vehicles = vehicles;
@@ -66,8 +69,54 @@ public class VehicleController {
         }
     }
 
+    public void addVehicle(Vehicle vehicle){this.vehicles.add(vehicle);}
+    public void removeVehicle(Vehicle vehicle){this.vehicles.remove(vehicle);}
+    public int getNumberOfBarci() {
+        int nrBarci = 0;
+
+        for (int i = 0; i < vehicles.size(); i++) {
+            if (vehicles.get(i) instanceof Barca) {
+                nrBarci++;
+            }
+        }
+        return nrBarci;
+    }
+
+    public String toSave(){
+        String text="";
+        int i;
+        for(i=0; i<vehicles.size(); i++){
+            text+=vehicles.get(i).toSave()+"\n";
+        }
+         text+=vehicles.get(i).toSave();
+        return text;
+    }
+
+
+    public void save(){
+        try {
+            File file=new File("C:\\mycode\\OOP\\mostenirea\\mostenireaInitiere\\src\\ro\\mycode\\data\\vehicle.txt");
+            FileWriter fileWriter=new FileWriter(file);
+            PrintWriter printWriter=new PrintWriter(fileWriter);
+           printWriter.print(toSave());
+
+           printWriter.close();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+
+    public Vehicle findById(int id){
+        for(int i=0; i<vehicles.size(); i++){
+            if(vehicles.get(i).getId()==id){
+                return vehicles.get(i);
+            }
+        }
+        return null;
+    }
+
+
 
 }
-
-
 
