@@ -11,8 +11,8 @@ public class Main {
 //        System.out.println(c3.descriereCar());
 
         VehicleController vehicleController=new VehicleController();
-      vehicleController.afisareVehicul();
+      //vehicleController.afisareVehicul();
 
-
+        System.out.println(vehicleController.getNumberOfBarci());
     }
 }

@@ -64,5 +64,10 @@ public class Vehicle {
     public String descriereVehicle() {
         return "Eu sunt un vehicul de la:  " + this.producer + "\n constuit in anul:" + this.year + "\n id-ul:" + this.id;
     }
+
+
+    public String toSave(){
+        return producer+","+id+","+year+","+type;
+    }
 }
 
