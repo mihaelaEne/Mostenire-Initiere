@@ -81,4 +81,6 @@ public class Plane extends Vehicle{
         text+="companie: "+this.companie;
         return text;
     }
+
+    public String toSavePlane(){return  super.toSaveVehicle()+","+aeroportHome+","+nrLocuri+","+companie;}
 }

@@ -13,9 +13,11 @@ import java.util.Scanner;
 
 public class VehicleController {
 
-
+    private Scanner scanner;
     private ArrayList<Vehicle> vehicles;
     private ArrayList<Barca> barci;
+    private ArrayList<Car> cars;
+    private ArrayList<Plane> planes;
 
     public VehicleController(ArrayList<Vehicle> vehicles) {
         this.vehicles = vehicles;
@@ -82,16 +84,26 @@ public class VehicleController {
         return nrBarci;
     }
 
-    public String toSave(){
+    public String toSave() {
         String text="";
-        int i;
-        for(i=0; i<vehicles.size(); i++){
-            text+=vehicles.get(i).toSave()+"\n";
+        for (int i = 0; i < vehicles.size(); i++) {
+            if (vehicles.get(i) instanceof Car) {
+                Car car = (Car) vehicles.get(i);
+                text+=car.toSaveCar()+"\n";
+
+            }else if (vehicles.get(i) instanceof Plane) {
+                Plane plane = (Plane) vehicles.get(i);
+                text+=plane.toSavePlane()+"\n";
+
+            }else{
+                Barca barca = (Barca) vehicles.get(i);
+
+                text+=barca.toSaveBarca()+"\n";
+
+            }
         }
-         text+=vehicles.get(i).toSave();
         return text;
     }
-
 
     public void save(){
         try {
@@ -99,7 +111,6 @@ public class VehicleController {
             FileWriter fileWriter=new FileWriter(file);
             PrintWriter printWriter=new PrintWriter(fileWriter);
            printWriter.print(toSave());
-
            printWriter.close();
         }catch (Exception e){
             e.printStackTrace();

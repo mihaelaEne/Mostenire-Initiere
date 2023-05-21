@@ -66,8 +66,8 @@ public class Vehicle {
     }
 
 
-    public String toSave(){
-        return producer+","+id+","+year+","+type;
+    public String toSaveVehicle(){
+        return type+","+producer+","+id+","+year;
     }
 }
 

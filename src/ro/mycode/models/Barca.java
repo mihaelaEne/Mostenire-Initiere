@@ -81,4 +81,6 @@ public class Barca extends Vehicle {
 
         return text;
     }
+
+    public String toSaveBarca(){return super.toSaveVehicle()+","+nrKg+","+nume+","+port;}
 }

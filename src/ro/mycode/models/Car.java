@@ -82,4 +82,5 @@ public class Car extends Vehicle {
 
         return text;
     }
+    public String toSaveCar(){return  super.toSaveVehicle()+","+model+","+culoare+","+nrUsi;}
 }

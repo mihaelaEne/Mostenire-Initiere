@@ -7,3 +7,8 @@ Plane,planeProducer3,3,2010,SBZ,100,Tarom
 Barca,barcaProducer1,1,2023,5000,NumeBarca1,NumePort1
 Barca,barcaProducer2,2,2009,100,numeBarca2,numePort2
 Barca, barcaProducer3,3,2010,20,numeBarca3,numePort3
+car,producatorTestare,1111,2023,modelMasinaTestare,culoareTestare,4
+palne,producatorTestare2,222,2023,OTP,100,Tarom
+barca,producatorTestare3,3333,2023,1000,numeBarca1,port1
+car,producator+Masina2,1212,2022,model-Masina2,culoare-Masina,2
+barca,test1,9999,2000,100,test2,test3

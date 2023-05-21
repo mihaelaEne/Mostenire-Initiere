@@ -11,7 +11,9 @@ public class ViewVehicle {
     private VehicleController vehicleController;
 
 
-    public ViewVehicle(Vehicle vehicle) {
+
+
+    public ViewVehicle() {
         vehicleController = new VehicleController();
         scanner = new Scanner(System.in);
         play();
@@ -22,6 +24,7 @@ public class ViewVehicle {
         System.out.println("Apasa tasta 1 pentru a afisa toate vehiculele");
         System.out.println("Apasa tasta 2 pentru a adauga un vehicul ");
         System.out.println("Apasa tasta 3 pentru a sterge un vehicul ");
+        System.out.println("Apasa tasta 4 pentru a salva si a te deloga");
     }
 
     public void play() {
@@ -39,6 +42,10 @@ public class ViewVehicle {
                     break;
                 case 3:
                     stergereVehicle();
+                    break;
+                case 4:
+                    running=false;
+                    vehicleController.toSave();
                     break;
                 default:
                     System.out.println("Alegere incorecta");
