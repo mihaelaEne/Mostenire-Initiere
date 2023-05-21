@@ -1,5 +1,6 @@
 import ro.mycode.controllers.VehicleController;
 import ro.mycode.models.Car;
+import ro.mycode.view.ViewVehicle;
 
 public class Main {
     public static void main(String[] args) {
@@ -10,9 +11,13 @@ public class Main {
 //
 //        System.out.println(c3.descriereCar());
 
-        VehicleController vehicleController=new VehicleController();
-      vehicleController.afisareVehicul();
+        //VehicleController vehicleController=new VehicleController();
+      //vehicleController.afisareVehicul();
+
+       // System.out.println(vehicleController.getNumberOfBarci());
 
 
+        ViewVehicle viewVehicle=new ViewVehicle();
+        viewVehicle.play();
     }
 }
